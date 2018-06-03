@@ -1,0 +1,26 @@
+######## baseline
+########
+
+########  atec_nlp_sim_train
+# posFeature.txt the Standard Featureset 1 x label(1), 1 x label(0)
+# posFeature4.txt 4 x label(1),1 x label(0)
+accuracy 0.5194174757281553
+precision 0.2637507981391955
+f1 0.3795242001640689
+recall 0.6764533863609778
+# posFeature0.25.txt 1 x label(1). 0.25 x label(0)
+accuracy 0.49112997509276674
+precision 0.2576160899142266
+f1 0.37850757387633477
+recall 0.7131828284009826
+########
+
+
+
+####### extract_tags.py
+-- jieba.analyse.extract_tags(src, topK=topK)
+    accuracy 0.6698673848766065
+    precision 0.25655779863700656
+    f1 0.32056714799268976
+    recall 0.4271340647578271
+#######
