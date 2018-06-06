@@ -31,9 +31,9 @@ def getTheOriginData(path):
 
 ##get the data
 ##get the train data
-ori_trainPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/atec_nlp_sim_train_all/posFeature4.txt'
+ori_trainPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/atec_nlp_sim_train_all/Filter_sim/posFeature3.txt'
 train_labels, train_featureset = getTheOriginData(ori_trainPath)
-ori_testPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/atec_nlp_sim_train_all/posFeature.txt'
+ori_testPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/atec_nlp_sim_train_all/Filter_sim/posFeature.txt'
 test_labels, test_featureset = getTheOriginData(ori_testPath)
 from sklearn.neural_network import MLPClassifier
 clf = MLPClassifier(solver='lbfgs', alpha=1e-5,batch_size=128,

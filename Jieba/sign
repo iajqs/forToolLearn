@@ -1,18 +1,29 @@
 ######## baseline
+# sim
+precision =  0.22812174077936853
+recall =  0.6438319507626439
+f1 =  0.3368804256510781
 ########
 
 ########  atec_nlp_sim_train
 # posFeature.txt the Standard Featureset 1 x label(1), 1 x label(0)
-# posFeature4.txt 4 x label(1),1 x label(0)
+## posFeature4.txt 4 x label(1),1 x label(0)
 accuracy 0.5194174757281553
 precision 0.2637507981391955
 f1 0.3795242001640689
 recall 0.6764533863609778
-# posFeature0.25.txt 1 x label(1). 0.25 x label(0)
+
+## posFeature0.25.txt 1 x label(1). 0.25 x label(0)
 accuracy 0.49112997509276674
 precision 0.2576160899142266
 f1 0.37850757387633477
 recall 0.7131828284009826
+
+
+# sim + jieba.load_userdict('../Jieba/dict.txt')
+precision =  0.26194245782606324
+recall =  0.5135670323789135
+f1 =  0.34693324174334317
 ########
 
 

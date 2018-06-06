@@ -128,7 +128,8 @@ def getFeature(src, susp):
 
 ##get the data
 ##get the train data
-ori_trainPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/Origin/atec_nlp_sim_train_all.csv'
+# ori_trainPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/Origin/atec_nlp_sim_train_all.csv'
+ori_trainPath = 'E:/学习资料/自然语言处理/forToolLearn/data/ATEC/Filter/sim.csv'
 train_labels, train_pairslist = getTheOriginData(ori_trainPath)
 
 
@@ -139,7 +140,7 @@ sign = 1
 # posFeature4.txt 4 x label(1),1 x label(0)
 # posFeature0.25.txt 1 x label(1). 0.25 x label(0)
 ########
-with open('E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/atec_nlp_sim_train_all/posFeature.txt', 'w',encoding='UTF-8') as fs:
+with open('E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/atec_nlp_sim_train_all/Filter_sim/posFeature3.txt', 'w',encoding='UTF-8') as fs:
     for i in range(len(segLists)):
         segList = segLists[i]
         label = train_labels[i]
@@ -155,10 +156,10 @@ with open('E:/学习资料/自然语言处理/forToolLearn/data/ATEC/data/jieba/
             if word == '/':
                 continue
             suspstr = srcstr + word + '/' + flag + ' '
-        fs.write(label + '\t' + str(getFeature(srcstr, suspstr)) + '\n')
-        # 4
-        # if label == '0':
-        #     fs.write(label + '\t' + str(getFeature(srcstr, suspstr)) + '\n')
-        # else:
-        #     for j in range(4):
-        #         fs.write(label + '\t' + str(getFeature(srcstr, suspstr)) + '\n')
+        # fs.write(label + '\t' + str(getFeature(srcstr, suspstr)) + '\n')
+        # multi
+        if label == '0':
+            fs.write(label + '\t' + str(getFeature(srcstr, suspstr)) + '\n')
+        else:
+            for j in range(3):
+                fs.write(label + '\t' + str(getFeature(srcstr, suspstr)) + '\n')
